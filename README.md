@@ -1,46 +1,58 @@
-# Conversor de Divisas (Ejemplo de paquete en Go)
+# Conversor de Divisas y Contador de Vocales (Ejemplo de paquetes en Go)
 
-Este repositorio contiene un ejemplo sencillo de una función para convertir
-una cantidad en dólares (USD) a distintas monedas. Está pensado como un
-pequeño paquete didáctico para aprender a crear paquetes en Go.
+Este repositorio contiene ejemplos sencillos de funciones implementadas como paquetes en Go. Está pensado como un pequeño proyecto didáctico para aprender a crear y usar paquetes en Go.
 
-Repositorio: https://github.com/mat1520/Creacion_de_Paquetes_en_Go
+Repositorio: [https://github.com/mat1520/Creacion_de_Paquetes_en_Go](https://github.com/mat1520/Creacion_de_Paquetes_en_Go)
 
-Contenido relevante:
-- `Conversor_Divisas.go` - Implementación y documentación de ejemplo.
+## Contenido relevante
 
-Cómo probarlo (pasos mínimos)
+- `conversor/conversor.go`: Implementación de un conversor de divisas.
+- `contador/contador.go`: Implementación de un contador de vocales.
+- `src/main.go`: Ejemplo de uso interactivo de los paquetes.
 
-1) Desde el directorio del proyecto, inicializa el módulo de Go (si no existe):
+## Cómo clonar y probar el proyecto
+
+1. Clona este repositorio:
+
+```bash
+git clone https://github.com/mat1520/Creacion_de_Paquetes_en_Go.git
+cd Creacion_de_Paquetes_en_Go
+```
+
+1. Inicializa el módulo de Go (si no lo has hecho):
 
 ```bash
 go mod init github.com/mat1520/Creacion_de_Paquetes_en_Go
 ```
 
-2) Crea un `main.go` de ejemplo (archivo nuevo) con este contenido:
+1. Ejecuta el archivo `main.go` para probar las funcionalidades:
+
+```bash
+go run src/main.go
+```
+
+## Uso de los paquetes
+
+### Conversor de Divisas
+
+El paquete `conversor` permite convertir dólares a varias monedas. Para usarlo:
 
 ```go
-package main
-
-import "github.com/mat1520/Creacion_de_Paquetes_en_Go"
+import "github.com/mat1520/Creacion_de_Paquetes_en_Go/conversor"
 
 func main() {
-    Conversor_Divisas.ConversorDivisas()
+    conversor.ConversorDivisas()
 }
 ```
 
-3) Ejecuta el ejemplo:
+### Contador de Vocales
 
-```bash
-go run main.go
+El paquete `contador` permite contar las vocales en una frase ingresada por el usuario. Para usarlo:
+
+```go
+import "github.com/mat1520/Creacion_de_Paquetes_en_Go/contador"
+
+func main() {
+    contador.ContadorDeVocales()
+}
 ```
-
-Notas
-- Las tasas de conversión incluidas son ejemplos estáticos. Para uso real
-  deberías obtener tasas actualizadas desde una API externa.
-- Si prefieres, puedes mover `Conversor_Divisas.go` a un subdirectorio
-  (por ejemplo `conversor`) y ajustar las rutas de importación en el `main.go`.
-
-Contribuciones y licencias
-- Este repositorio es un ejemplo; añade mejoras como tests, manejo de errores
-  y llamadas a APIs para hacerlo más robusto.
