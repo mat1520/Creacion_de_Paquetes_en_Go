@@ -19,13 +19,13 @@ git clone https://github.com/mat1520/Creacion_de_Paquetes_en_Go.git
 cd Creacion_de_Paquetes_en_Go
 ```
 
-1. Inicializa el módulo de Go (si no lo has hecho):
+2. Inicializa el módulo de Go (si no lo has hecho):
 
 ```bash
 go mod init github.com/mat1520/Creacion_de_Paquetes_en_Go
 ```
 
-1. Ejecuta el archivo `main.go` para probar las funcionalidades:
+3. Ejecuta el archivo `main.go` para probar las funcionalidades:
 
 ```bash
 go run src/main.go
@@ -36,6 +36,16 @@ go run src/main.go
 ### Conversor de Divisas
 
 El paquete `conversor` permite convertir dólares a varias monedas. Para usarlo:
+
+1. Asegúrate de haber inicializado el módulo de Go y descargado las dependencias:
+
+```bash
+go mod init (Aqui poner el nombre)
+
+go get github.com/mat1520/Creacion_de_Paquetes_en_Go/conversor
+```
+
+2. Importa el paquete en tu archivo Go:
 
 ```go
 import "github.com/mat1520/Creacion_de_Paquetes_en_Go/conversor"
@@ -48,6 +58,16 @@ func main() {
 ### Contador de Vocales
 
 El paquete `contador` permite contar las vocales en una frase ingresada por el usuario. Para usarlo:
+
+1. Asegúrate de haber inicializado el módulo de Go y descargado las dependencias:
+
+```bash
+go mod init (Aqui poner el nombre)
+
+go get github.com/mat1520/Creacion_de_Paquetes_en_Go/contador
+```
+
+2. Importa el paquete en tu archivo Go:
 
 ```go
 import "github.com/mat1520/Creacion_de_Paquetes_en_Go/contador"
