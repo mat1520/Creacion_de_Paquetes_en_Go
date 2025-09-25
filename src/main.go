@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mat1520/Creacion_de_Paquetes_en_Go/Contador_de_Vocales"
-	"github.com/mat1520/Creacion_de_Paquetes_en_Go/Conversor_Divisas"
+	"github.com/mat1520/Creacion_de_Paquetes_en_Go/contador"
+	"github.com/mat1520/Creacion_de_Paquetes_en_Go/conversor"
 )
 
 func main() {
@@ -30,9 +30,9 @@ func main() {
 
 		switch opcion {
 		case 1:
-			Conversor_Divisas.ConversorDivisas()
+			conversor.ConversorDivisas()
 		case 2:
-			Contador_de_Vocales.ContadorDeVocales()
+			contador.ContadorDeVocales()
 		case 0:
 			fmt.Println("Adiós")
 			return
