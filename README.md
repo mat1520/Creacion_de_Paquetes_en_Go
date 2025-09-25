@@ -76,3 +76,6 @@ func main() {
     contador.ContadorDeVocales()
 }
 ```
+## Testing the Packages
+
+Para probar los paquetes en un proyecto, puedes crear un archivo de prueba que importe y use las funciones, Como lo realice en el Test_paquetes.zip.
